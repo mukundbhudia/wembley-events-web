@@ -1,30 +1,23 @@
 <script lang="ts">
-	export let name: string;
+  import Header from './Header.svelte'
+  import EventList from './EventList.svelte'
+
+  export let title: string
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <div class="container py-4">
+    <h1>{title}</h1>
+    <Header />
+    <EventList />
+  </div>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  h1 {
+    color: #371488;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
 </style>
