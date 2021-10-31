@@ -1,0 +1,8 @@
+version: 2
+updates:
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    # Check the crates registry for updates every day (weekdays)
+    schedule:
+      interval: "daily"
