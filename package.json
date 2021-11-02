@@ -1,6 +1,6 @@
 {
-  "name": "svelte-app",
-  "version": "1.0.0",
+  "name": "wembley-events-web",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "build": "rollup -c",
