@@ -8,15 +8,35 @@
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "plugins": ["svelte3"],
-  "extends": ["eslint:recommended"],
+  "plugins": [
+    "svelte3"
+  ],
+  "extends": [
+    "eslint:recommended"
+  ],
   "overrides": [
     {
-      "files": ["**/*.svelte"],
+      "files": [
+        "**/*.svelte"
+      ],
       "processor": "svelte3/svelte3"
     }
   ],
   "rules": {
-    // ...
+    "no-console": 0,
+    "no-underscore-dangle": 2,
+    "no-case-declarations": 2,
+    "no-tabs": 2,
+    "arrow-parens": 2,
+    "quotes": 2,
+    "comma-style": 2,
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "quote-props": [
+      2,
+      "as-needed"
+    ]
   }
 }
