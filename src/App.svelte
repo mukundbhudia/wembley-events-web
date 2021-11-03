@@ -1,6 +1,6 @@
 <script lang="ts">
   import Header from './Header.svelte'
-  import EventList from './EventList.svelte'
+  import EventList from './Events.svelte'
 
   export let title: string
 </script>
