@@ -15,6 +15,7 @@
 
 <style>
   h1 {
+    text-align: center;
     color: #371488;
     text-transform: uppercase;
     font-size: 4em;

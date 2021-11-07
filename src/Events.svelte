@@ -27,7 +27,7 @@
     categorisedEvents = categoriseEventsByDate(events)
   }
 
-  function isDateInFuturePastOrPresent(firstDate, secondDate) {
+  function isDateInFuturePastOrPresent(firstDate: Date, secondDate: Date) {
     if (firstDate.setHours(0, 0, 0, 0) < secondDate.setHours(0, 0, 0, 0)) {
       return Category.Upcoming
     } else if (
