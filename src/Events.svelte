@@ -12,14 +12,19 @@
     total: 0,
   }
 
-  async function getCalendarEvents() {
-    let events: Array<Event>
-    events = await fetch(
-      `https://mukundbhudia.github.io/wembley-events/wembley-events.json`
-    )
-      .then((r) => r.json())
-      .catch((e) => console.error(e))
+  async function getEventsFromUrl(url: string): Promise<Event[]> {
+    return await fetch(url)
+      .then((r): Promise<Event[]> => r.json())
+      .catch((e) => {
+        console.error(e)
+        return []
+      })
+  }
 
+  async function getCalendarEvents() {
+    let events: Array<Event> = await getEventsFromUrl(
+      'https://mukundbhudia.github.io/wembley-events/wembley-events.json'
+    )
     events.map((event) => {
       event.date = new Date(event.date)
     })
