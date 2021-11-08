@@ -6,6 +6,24 @@ on:
       - "v*"
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check code
+        run: |
+          npm install
+          npm run check
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint code
+        run: |
+          npm install
+          npm run lint
+
   build:
     name: Build app and deploy to gh-pages
     runs-on: ubuntu-latest
