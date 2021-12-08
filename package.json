@@ -22,7 +22,7 @@
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.4.1",
     "eslint-plugin-svelte3": "^3.2.1",
-    "prettier": "^2.5.0",
+    "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
     "rollup": "^2.60.2",
     "rollup-plugin-copy": "^3.4.0",
