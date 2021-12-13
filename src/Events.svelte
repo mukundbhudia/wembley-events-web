@@ -1,71 +1,33 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import { Category } from './events'
+  import { getEventsFromUrl, categoriseEventsByDate } from './events'
   import type { Event, CategorisedEvents } from './events'
 
   import EventList from './EventList.svelte'
 
-  let categorisedEvents: CategorisedEvents = {
+  let events: CategorisedEvents = {
     today: [],
     past: [],
     upcoming: [],
     total: 0,
   }
 
-  async function getEventsFromUrl(url: string): Promise<Event[]> {
-    return await fetch(url)
-      .then((r): Promise<Event[]> => r.json())
-      .catch((e) => {
-        console.error(e)
-        return []
-      })
-  }
-
   async function getCalendarEvents() {
-    let events: Array<Event> = await getEventsFromUrl(
+    let eventsFromCalendar: Array<Event> = await getEventsFromUrl(
       'https://mukundbhudia.github.io/wembley-events/wembley-events.json'
     )
-    events.map((event) => {
+    eventsFromCalendar.map((event) => {
       event.date = new Date(event.date)
     })
 
-    categorisedEvents = categoriseEventsByDate(events)
-  }
-
-  function isDateInFuturePastOrPresent(firstDate: Date, secondDate: Date) {
-    if (firstDate.setHours(0, 0, 0, 0) < secondDate.setHours(0, 0, 0, 0)) {
-      return Category.Upcoming
-    } else if (
-      firstDate.setHours(0, 0, 0, 0) === secondDate.setHours(0, 0, 0, 0)
-    ) {
-      return Category.Today
-    } else {
-      return Category.Past
-    }
-  }
-
-  function categoriseEventsByDate(events: Array<Event>) {
-    const today = new Date()
-    const eventsByDate: CategorisedEvents = {
-      today: [],
-      past: [],
-      upcoming: [],
-      total: events.length,
-    }
-
-    events.forEach((event) => {
-      const category = isDateInFuturePastOrPresent(today, event.date)
-      eventsByDate[category].push(event)
-    })
-
-    return eventsByDate
+    events = categoriseEventsByDate(eventsFromCalendar)
   }
 
   onMount(getCalendarEvents)
 </script>
 
 <main>
-  {#if categorisedEvents.total > 0}
+  {#if events.total > 0}
     <div class="accordion" id="accordionPanelsStayOpenExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -77,7 +39,7 @@
             aria-expanded="false"
             aria-controls="panelsStayOpen-collapseOne"
           >
-            Past events ({categorisedEvents.past.length})
+            Past events ({events.past.length})
           </button>
         </h2>
         <div
@@ -87,7 +49,7 @@
         >
           <div class="accordion-body">
             <h4>Past events</h4>
-            <EventList events={categorisedEvents.past} />
+            <EventList events={events.past} />
           </div>
         </div>
       </div>
@@ -102,7 +64,7 @@
             aria-expanded="true"
             aria-controls="panelsStayOpen-collapseTwo"
           >
-            Events today ({categorisedEvents.today.length})
+            Events today ({events.today.length})
           </button>
         </h2>
         <div
@@ -111,9 +73,9 @@
           aria-labelledby="panelsStayOpen-headingTwo"
         >
           <div class="accordion-body">
-            {#if categorisedEvents.today.length > 0}
+            {#if events.today.length > 0}
               <h4>Events today</h4>
-              <EventList events={categorisedEvents.today} />
+              <EventList events={events.today} />
             {:else}
               <h4>No events today</h4>
             {/if}
@@ -131,7 +93,7 @@
             aria-expanded="true"
             aria-controls="panelsStayOpen-collapseThree"
           >
-            Upcoming events ({categorisedEvents.upcoming.length})
+            Upcoming events ({events.upcoming.length})
           </button>
         </h2>
         <div
@@ -141,7 +103,7 @@
         >
           <div class="accordion-body">
             <h4>Upcoming events</h4>
-            <EventList events={categorisedEvents.upcoming} />
+            <EventList events={events.upcoming} />
           </div>
         </div>
       </div>
