@@ -19,6 +19,7 @@ jobs:
           npm run check
 
   lint:
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,11 +28,11 @@ jobs:
           npm install
           npm run lint
 
-  # test:
-  #   needs: lint
-  #   runs-on: ubuntu-latest
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Run tests
-  #       run: npm run test
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run tests
+        run: npm test
