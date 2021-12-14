@@ -10,7 +10,7 @@ This project shows all the upcoming events at Wembley Stadium.
  - Don't struggle with parking.
  - Don't waste precious time.
 
- ![Wembley Events Web home page](https://github.com/mukundbhudia/wembley-events-web/raw/master/screenshots/home.png)
+ ![Wembley Events Web home page](https://github.com/mukundbhudia/wembley-events-web/raw/main/screenshots/home.png)
 
 The calendar is updated regularly and is always available to subscribe to/download here: **https://wembleyevents.mukund.uk/**.
 
