@@ -45,7 +45,7 @@
     "babel-jest": "^27.4.5",
     "eslint": "^8.6.0",
     "eslint-plugin-svelte3": "^3.3.0",
-    "jest": "^27.4.5",
+    "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.1",
     "rollup": "^2.63.0",
