@@ -1,7 +1,8 @@
 import mockEvents from './mocks/mockEvents.json'
 import { mockCategorisedEvents } from './mocks/mockCategorisedEvents'
 
-import { CategorisedEvents, categoriseEventsByDate, Event } from '../events'
+import type { CategorisedEvents, Event } from '../events'
+import { categoriseEventsByDate } from '../events'
 
 test('should categorise events correctly', () => {
   const mockExpectedCategorisedEvents: CategorisedEvents = mockCategorisedEvents
