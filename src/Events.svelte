@@ -19,6 +19,7 @@
     eventsFromCalendar.map((event) => {
       event.date = new Date(event.date)
     })
+    eventsFromCalendar.sort((a, b) => a.date.getSeconds() - b.date.getSeconds())
 
     events = categoriseEventsByDate(eventsFromCalendar)
   }
