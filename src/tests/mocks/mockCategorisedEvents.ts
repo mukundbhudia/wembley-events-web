@@ -4,82 +4,90 @@ import type { CategorisedEvents } from '../../events'
 const mockCategorisedEvents: CategorisedEvents = {
   past: [
     {
-      date: new Date('26 June 2021'),
-      time_and_place:
-        '26 June 2021, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - Round of 16: Italy v Austria',
+      date: new Date('19 Jun 2022'),
+      time: 'Sun, Jun 19',
+      place: 'Club Wembley',
+      title: 'Harry Styles',
       description:
-        'Round of 16: 1A v 2C takes place on Saturday 26 June 2021. Kick off is at 8pm and parking restrictions will be in place until midnight.',
+        'Multi-platinum recording artist Harry Styles announces the rescheduled dates for his world tour, in addition to new shows added across the globe. Styles will kick off his colossal 32-city outing...',
     },
     {
-      date: new Date('29 June 2021'),
-      time_and_place:
-        '29 June 2021, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - Round of 16: England v Germany',
+      date: new Date('19 Jun 2022'),
+      time: 'Wed, Jun 15 – Sun, Jun 19',
+      place: 'Wembley Stadium',
+      title: 'Harry Styles Love On Tour',
       description:
-        'Round of 16: 1D v 2F takes place on Tuesday 29 June 2021. Kick off is at 5pm and parking restrictions will be in place until midnight.',
+        'Countdown to Harry Styles Show 1 taking place on Wednesday, June 15, 4:00 PM. Sir Matt Busby Way, Manchester, England, M16 0RA, United Kingdom.',
     },
     {
-      date: new Date('06 July 2021'),
-      time_and_place:
-        '6 July 2021, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - UEFA Euro 2020: Italy v Spain',
+      date: new Date('29 Jun 2022'),
+      time: 'Wed, 4:30 – 8:30 PM',
+      place: 'Wembley Stadium',
+      title: 'Dylan @ Wembley Stadium',
       description:
-        'The first semi-final between Italy and Spain takes place on Tuesday 6 July 2021. Kick off is 8pm and parking restrictions will be in place until midnight.',
+        'span Ed Sheeran has announced the first leg of his ‘+ - = ÷ x Tour’ (pronounced ‘The Mathematics Tour’) , taking place in stadiums throughout 2022. Kicking off in April next year, the tour will...',
     },
     {
-      date: new Date('07 July 2021'),
-      time_and_place:
-        '7 July 2021, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - UEFA Euro 2020: England v Denmark',
+      date: new Date('1 Jul 2022'),
+      time: 'Fri, 9 AM – 1 PM',
+      place: 'Wembley Stadium',
+      title: 'Ed Sheeran + - = ÷ x Tour',
       description:
-        'The second semi-final between England and Denmark takes place on Wednesday 7 July 2021. Kick off is 8pm and parking restrictions will be in place until midnight.',
+        'span Ed Sheeran has announced the first leg of his ‘+ - = ÷ x Tour’ (pronounced ‘The Mathematics Tour’) , taking place in stadiums throughout 2022. Kicking off in April next year, the tour will...',
     },
     {
-      date: new Date('17 July 2021'),
-      time_and_place:
-        '17 July 2021, Kick off: 12pm, Wembley Stadium, Wembley, London HA9 0WS',
-      title:
-        'Wembley Stadium event - The Betfred Challenge Cup Final between Castleford Tigers and St Helens',
+      date: new Date('26 Jun 2022'),
+      time: 'Sun, 7 – 9 PM',
+      place: 'The SSE Arena, Wembley',
+      title: 'Jubin Nautiyal - RESCHEDULED',
       description:
-        'The Betfred Challenge Cup Final between Castleford Tigers and St Helens will take place on Saturday 17 July 2021 at Wembley Stadium. Event day parking restrictions will be in place until midnight.',
-    },
-    {
-      date: new Date('12 October 2021'),
-      time_and_place:
-        '12 October 2021, 7:45pm, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - England v Hungary',
-      description:
-        'Qatar 2022 World Cup Qualifier takes place on Tuesday, 12 October 2021. Event day parking restrictions will be in place until midnight.',
-    },
-    {
-      date: new Date('23 October 2021'),
-      time_and_place:
-        '23 October 2021, 5:15pm, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Wembley Stadium event - England Women v Northern Ireland',
-      description:
-        'FIFA Women’s World Cup 2023 Qualifier takes place on Saturday 23 October 2021 at 5:15pm. Event day parking restrictions will be in place until midnight.',
-    },
-    {
-      date: new Date('12 November 2021'),
-      time_and_place:
-        '12 November 2021, 7:45pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
-      title: 'Qatar 2022 World Cup Qualifier: England v Albania',
-      description:
-        'England will face Albania in Qatar 2022 World Cup Qualifier at Wembley on Friday 12 November 2021 at 7:45pm. Event day parking restrictions will be in place until midnight.',
-    },
-    {
-      date: new Date('05 December 2021'),
-      time_and_place:
-        '5 December 2021, TBC, Wembley Stadium, Wembley, London HA9 0WS',
-      title: "Wembley Stadium event - The women's FA cup final",
-      description:
-        "The women's FA cup final takes place on Sunday 5 December 2021. Event day parking restrictions will be in place until midnight.",
+        'Please be advised that Wembley Arena seating is divided into bays: - Blocks A and B are not raked and other customers may stand during the performance. - Blocks C and D are tiered behind these. ...',
     },
   ],
   today: [],
-  total: 9,
-  upcoming: [],
+  total: 10,
+  upcoming: [
+    {
+      date: new Date('20 Aug 2022'),
+      time: 'Sat, 5 – 9 PM',
+      place: 'Wembley Stadium',
+      title: 'Coldplay: Music of the Spheres World Tour',
+      description:
+        'Global super pop rock band Coldplay will be hitting the road on tour in 2022 and will be performing live on stage in their Music of the Spheres World Tour ! This particular live concert is...',
+    },
+    {
+      date: new Date('16 Aug 2022'),
+      time: 'Tue, 5 – 9 PM',
+      place: 'Wembley Stadium',
+      title: 'Coldplay @ Wembley Stadium',
+      description:
+        'Global super pop rock band Coldplay will be hitting the road on tour in 2022 and will be performing live on stage in their Music of the Spheres World Tour ! This particular live concert is...',
+    },
+    {
+      date: new Date('6 Aug 2022'),
+      time: 'Sat, Aug 6 – Sun, Aug 7',
+      place: 'Best Western Palm Hotel',
+      title: 'Westlife at Wembley',
+      description:
+        'Westlife first broke into the charts with their debut single Swear It Again. Released in April 1999, the song peaked at No.1 on the Official UK Singles Chart where it remained for two weeks. The...',
+    },
+    {
+      date: new Date('27 Aug 2022'),
+      time: 'Sat, 7 – 11 PM',
+      place: 'The SSE Arena, Wembley',
+      title: 'Celebrating Africa',
+      description:
+        'Buy Celebrating Africa tickets and sign-up for latest tour alerts. Find Celebrating Africa tour dates, reviews, times and event details.',
+    },
+    {
+      date: new Date('28 Aug 2022'),
+      time: 'Sun, 7:30 – 9:30 PM',
+      place: 'The SSE Arena, Wembley',
+      title: 'Neha Kakkar - RESCHEDULED',
+      description:
+        'Please be advised that Wembley Arena seating is divided into bays: - Blocks A and B are not raked and other customers may stand during the performance. - Blocks C and D are tiered behind these. ...',
+    },
+  ],
 }
 
 export { mockCategorisedEvents }

@@ -9,7 +9,8 @@ test('should categorise events correctly', () => {
   const mockEventsFromCalendar: Array<Event> = mockEvents.map((event) => {
     return {
       date: new Date(event.date),
-      time_and_place: event.time_and_place,
+      time: event.time,
+      place: event.place,
       title: event.title,
       description: event.description,
     }
@@ -38,15 +39,15 @@ test('should categorise events with same date correctly', () => {
   const mockEventsFromCalendar: Array<Event> = [
     {
       date: new Date('26 June 2021'),
-      time_and_place:
-        '26 June 2021, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
+      time: '26 June 2021',
+      place: '',
       title: 'Something',
       description: 'Some description',
     },
     {
       date: new Date('26 June 2021'),
-      time_and_place:
-        '26 June 2021, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+      time: '26 June 2021',
+      place: '',
       title: 'Something else',
       description: 'Some other description',
     },
@@ -57,15 +58,15 @@ test('should categorise events with same date correctly', () => {
     past: [
       {
         date: new Date('26 June 2021'),
-        time_and_place:
-          '26 June 2021, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
+        time: '26 June 2021',
+        place: '',
         title: 'Something',
         description: 'Some description',
       },
       {
         date: new Date('26 June 2021'),
-        time_and_place:
-          '26 June 2021, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+        time: '26 June 2021',
+        place: '',
         title: 'Something else',
         description: 'Some other description',
       },
@@ -88,22 +89,22 @@ test('should categorise events in past present and future correctly', () => {
   const mockEventsFromCalendar: Array<Event> = [
     {
       date: new Date('26 June 2020'),
-      time_and_place:
-        '26 June 2020, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
+      time: '26 June 2020',
+      place: '',
       title: 'Something',
       description: 'Some description',
     },
     {
       date: today,
-      time_and_place:
-        '26 June 2021, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+      time: '26 June 2021',
+      place: '',
       title: 'Something else',
       description: 'Some other description',
     },
     {
       date: new Date('26 June 3000'),
-      time_and_place:
-        '26 June 3000, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+      time: '26 June 3000',
+      place: '',
       title: 'Something else else',
       description: 'Some other other description',
     },
@@ -113,8 +114,8 @@ test('should categorise events in past present and future correctly', () => {
     today: [
       {
         date: today,
-        time_and_place:
-          '26 June 2021, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+        time: '26 June 2021',
+        place: '',
         title: 'Something else',
         description: 'Some other description',
       },
@@ -122,8 +123,8 @@ test('should categorise events in past present and future correctly', () => {
     past: [
       {
         date: new Date('26 June 2020'),
-        time_and_place:
-          '26 June 2020, 8pm to 12am, Wembley Stadium, Wembley, London HA9 0WS',
+        time: '26 June 2020',
+        place: '',
         title: 'Something',
         description: 'Some description',
       },
@@ -131,8 +132,8 @@ test('should categorise events in past present and future correctly', () => {
     upcoming: [
       {
         date: new Date('26 June 3000'),
-        time_and_place:
-          '26 June 3000, Kick off: 5pm, Wembley Stadium, Wembley, London HA9 0WS',
+        time: '26 June 3000',
+        place: '',
         title: 'Something else else',
         description: 'Some other other description',
       },

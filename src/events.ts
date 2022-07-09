@@ -1,6 +1,7 @@
 export interface Event {
   date: Date
-  time_and_place: string
+  time: string
+  place: string
   title: string
   description: string
 }
