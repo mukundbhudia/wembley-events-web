@@ -4,6 +4,7 @@ export interface Event {
   place: string
   title: string
   description: string
+  link: string
 }
 
 export interface CategorisedEvents {

@@ -13,6 +13,7 @@ test('should categorise events correctly', () => {
       place: event.place,
       title: event.title,
       description: event.description,
+      link: event.link,
     }
   })
 
@@ -43,6 +44,7 @@ test('should categorise events with same date correctly', () => {
       place: '',
       title: 'Something',
       description: 'Some description',
+      link: 'http://www.example.com/',
     },
     {
       date: new Date('26 June 2021'),
@@ -50,6 +52,7 @@ test('should categorise events with same date correctly', () => {
       place: '',
       title: 'Something else',
       description: 'Some other description',
+      link: 'http://www.example.com/',
     },
   ]
 
@@ -62,6 +65,7 @@ test('should categorise events with same date correctly', () => {
         place: '',
         title: 'Something',
         description: 'Some description',
+        link: 'http://www.example.com/',
       },
       {
         date: new Date('26 June 2021'),
@@ -69,6 +73,7 @@ test('should categorise events with same date correctly', () => {
         place: '',
         title: 'Something else',
         description: 'Some other description',
+        link: 'http://www.example.com/',
       },
     ],
     upcoming: [],
@@ -93,6 +98,7 @@ test('should categorise events in past present and future correctly', () => {
       place: '',
       title: 'Something',
       description: 'Some description',
+      link: 'http://www.example.com/',
     },
     {
       date: today,
@@ -100,6 +106,7 @@ test('should categorise events in past present and future correctly', () => {
       place: '',
       title: 'Something else',
       description: 'Some other description',
+      link: 'http://www.example.com/',
     },
     {
       date: new Date('26 June 3000'),
@@ -107,6 +114,7 @@ test('should categorise events in past present and future correctly', () => {
       place: '',
       title: 'Something else else',
       description: 'Some other other description',
+      link: 'http://www.example.com/',
     },
   ]
 
@@ -118,6 +126,7 @@ test('should categorise events in past present and future correctly', () => {
         place: '',
         title: 'Something else',
         description: 'Some other description',
+        link: 'http://www.example.com/',
       },
     ],
     past: [
@@ -127,6 +136,7 @@ test('should categorise events in past present and future correctly', () => {
         place: '',
         title: 'Something',
         description: 'Some description',
+        link: 'http://www.example.com/',
       },
     ],
     upcoming: [
@@ -136,6 +146,7 @@ test('should categorise events in past present and future correctly', () => {
         place: '',
         title: 'Something else else',
         description: 'Some other other description',
+        link: 'http://www.example.com/',
       },
     ],
     total: 3,
