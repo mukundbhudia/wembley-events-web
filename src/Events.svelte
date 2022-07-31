@@ -42,7 +42,9 @@
             aria-expanded="false"
             aria-controls="panelsStayOpen-collapseOne"
           >
-            Past events ({events.past.length})
+            <p class="accordion-events-title">
+              Past events ({events.past.length})
+            </p>
           </button>
         </h2>
         <div
@@ -67,7 +69,13 @@
             aria-expanded="true"
             aria-controls="panelsStayOpen-collapseTwo"
           >
-            Events today ({events.today.length})
+            <p
+              class="accordion-events-title {events.today.length > 0
+                ? 'embolden-text'
+                : ''}"
+            >
+              Events today ({events.today.length})
+            </p>
           </button>
         </h2>
         <div
@@ -96,12 +104,16 @@
             aria-expanded="true"
             aria-controls="panelsStayOpen-collapseThree"
           >
-            Upcoming events ({events.upcoming.length})
+            <p class="accordion-events-title">
+              Upcoming events ({events.upcoming.length})
+            </p>
           </button>
         </h2>
         <div
           id="panelsStayOpen-collapseThree"
-          class="accordion-collapse show"
+          class="accordion-collapse {events.today.length > 0
+            ? 'collapse'
+            : 'show'}"
           aria-labelledby="panelsStayOpen-headingThree"
         >
           <div class="accordion-body">
@@ -121,4 +133,10 @@
 </main>
 
 <style>
+  .accordion-events-title {
+    margin-bottom: 0;
+  }
+  .embolden-text {
+    font-weight: 600;
+  }
 </style>

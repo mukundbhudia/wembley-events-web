@@ -11,7 +11,7 @@
 
 <main>
   {#each eventsWithDate as event, _i}
-    <div class="card mb-3">
+    <div class="card mb-3 event-item">
       <div class="card-body">
         <h5 class="card-title">{event.title}</h5>
         <h6 class="card-subtitle mb-2">{event.place}</h6>
@@ -34,4 +34,11 @@
 </main>
 
 <style>
+  .event-item {
+    transition: background-color 0.5s ease;
+  }
+
+  .event-item:hover {
+    background-color: #fff7d5;
+  }
 </style>
