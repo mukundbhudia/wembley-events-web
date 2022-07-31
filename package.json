@@ -32,23 +32,23 @@
     ]
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-env": "^7.18.9",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.3",
+    "@rollup/plugin-typescript": "^8.3.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/svelte": "^3.1.3",
     "@tsconfig/svelte": "^3.0.0",
-    "@types/jest": "^28.1.4",
-    "@typescript-eslint/eslint-plugin": "^5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "babel-jest": "^28.1.2",
-    "eslint": "^8.19.0",
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "babel-jest": "^28.1.3",
+    "eslint": "^8.20.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "jest": "^28.1.2",
+    "jest": "^28.1.3",
     "prettier": "^2.7.1",
     "prettier-plugin-svelte": "^2.7.0",
-    "rollup": "^2.76.0",
+    "rollup": "^2.77.2",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.5",
@@ -58,12 +58,12 @@
     "svelte-check": "^2.8.0",
     "svelte-jester": "^2.3.2",
     "svelte-preprocess": "^4.10.7",
-    "ts-jest": "^28.0.5",
+    "ts-jest": "^28.0.7",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3",
+    "bootstrap": "^5.2.0",
     "sirv-cli": "^2.0.2"
   }
 }
