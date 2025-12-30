@@ -6,6 +6,7 @@
       "jest"
     ],
     "resolveJsonModule": true,
+    "sourceMap": true
   },
   "include": [
     "src/**/*"

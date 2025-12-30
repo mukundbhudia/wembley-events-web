@@ -31,13 +31,13 @@ export async function getEventsFromUrl(url: string): Promise<Event[]> {
 
 function isDateInFuturePastOrPresent(firstDate: Date, secondDate: Date) {
   if (firstDate.setHours(0, 0, 0, 0) < secondDate.setHours(0, 0, 0, 0)) {
-    return Category.Upcoming
+    return Category.Past
   } else if (
     firstDate.setHours(0, 0, 0, 0) === secondDate.setHours(0, 0, 0, 0)
   ) {
     return Category.Today
   } else {
-    return Category.Past
+    return Category.Upcoming
   }
 }
 
@@ -51,7 +51,7 @@ export function categoriseEventsByDate(events: Array<Event>) {
   }
 
   events.forEach((event) => {
-    const category = isDateInFuturePastOrPresent(today, event.date)
+    const category = isDateInFuturePastOrPresent(event.date, today)
     eventsByDate[category].push(event)
   })
 

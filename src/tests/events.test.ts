@@ -17,9 +17,15 @@ test('should categorise events correctly', () => {
     }
   })
 
+  // Mock the current date to be July 15, 2022 (between past and upcoming events)
+  jest.useFakeTimers()
+  jest.setSystemTime(new Date('15 Jul 2022'))
+
   expect(categoriseEventsByDate(mockEventsFromCalendar)).toStrictEqual(
     mockExpectedCategorisedEvents
   )
+
+  jest.useRealTimers()
 })
 
 test('should categorise no events correctly', () => {

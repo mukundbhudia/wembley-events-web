@@ -10,7 +10,7 @@
 </script>
 
 <main>
-  {#each eventsWithDate as event, _i}
+  {#each eventsWithDate as event (event.link + event.date)}
     <div class="card mb-3 event-item">
       <div class="card-body">
         <h5 class="card-title">{event.title}</h5>
